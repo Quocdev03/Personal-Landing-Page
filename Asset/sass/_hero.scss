@@ -1,0 +1,220 @@
+.hero {
+    &-container {
+        max-width: 1270px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 100px;
+    }
+
+    &-content {
+        max-width: 538px;
+        width: 100%;
+
+        &-name {
+            font-weight: 700;
+            font-size: 44px;
+            line-height: calc(55 / 44);
+            font-family: $font-last;
+            color: $cinder;
+            margin-bottom: 32px;
+
+            span {
+                color: $primary-color;
+            }
+        }
+
+        &-desc {
+            width: 100%;
+            max-width: 538px;
+            font-family: $font-primary;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: calc(32 / 16);
+            color: $cinder;
+            margin-bottom: 43px;
+        }
+
+        &-social {
+            display: flex;
+            align-items: center;
+            gap: 0 36px;
+        }
+    }
+
+    &-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        padding: 50px;
+
+
+        &-cover {
+            width: 24rem;
+            height: 24rem;
+            border: 1px solid $primary-color;
+            border-radius: 50%;
+            position: relative;
+            animation: move 35s linear infinite;
+
+            @keyframes move {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            &-icon {
+                display: block;
+                width: 2rem;
+                height: 2rem;
+                padding: 10px;
+                border-radius: 50%;
+                position: absolute;
+                color: $primary-color;
+                background-color: $purple-light;
+
+                &:nth-child(1) {
+                    left: calc($size-1 - $size-2);
+                    top: -$size-2;
+                }
+
+                &:nth-child(2) {
+                    right: -$size-2;
+                    top: calc($size-1 - $size-2);
+                }
+
+                &:nth-child(3) {
+                    left: -$size-2;
+                    top: calc($size-1 - $size-2);
+                }
+
+                &:nth-child(4) {
+                    bottom: -$size-2;
+                    left: calc($size-1 - $size-2);
+                }
+            }
+        }
+
+        &-img {
+            position: absolute;
+            width: 17rem;
+            height: 17rem;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: .5s ease;
+
+            &:hover {
+                width: 18.1rem;
+                height: 18.1rem;
+                transition: .4s ease;
+                cursor: pointer;
+                box-shadow: $primary-color 0px 3px 8px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 840.98px) {
+    .hero {
+        &-container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 10px !important;
+        }
+
+        &-content {
+            order: 1;
+
+            &-social {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                padding-bottom: 150px;
+            }
+
+            &-desc {
+                text-align: center;
+            }
+
+        }
+
+        .typed-animation {
+            display: block;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 344px;
+        }
+
+        .global-caption {
+            margin-bottom: 20px;
+            text-align: center;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        .typed-animation {
+            text-align: center;
+            margin: 0 auto !important;
+        }
+
+        &-image {
+            padding: 80px 20px;
+            margin: 0 auto;
+
+            &-cover {
+                position: unset;
+            }
+
+            &-img {
+                display: block;
+                position: unset;
+                object-fit: cover;
+
+                &:hover {
+                    width: 17rem;
+                    height: 17rem;
+                    transition: .4s ease;
+                    cursor: pointer;
+                    box-shadow: $primary-color 0px 6px 15px;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 1372px) {
+    .hero {
+        &-container {
+            padding: 0 15px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1249.98px) {
+    .hero {
+        &-image {
+            &-cover {
+                display: none;
+            }
+        }
+
+        &-container {
+            max-width: 1270px;
+            margin: 0px 88px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0 206px;
+        }
+    }
+}

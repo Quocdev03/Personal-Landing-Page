@@ -1,0 +1,158 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-top: 25px;
+    margin-bottom: 80px;
+
+    &-container {
+        width: 100%;
+        max-width: 1215px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+
+    &-menu {
+        display: flex;
+        align-items: center;
+        gap: 56px;
+
+        &-item {
+            &-link {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: calc(19 / 16);
+                color: $cinder;
+                text-decoration: none;
+            }
+
+            svg {
+                width: 12px;
+                height: 3px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &-content {
+        display: flex;
+        align-items: center;
+        gap: 0 60px;
+
+        &-button {
+            &-link {
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: calc(17 /14);
+                color: $cinder;
+                padding: 16px 24px;
+                border: 1px solid $light-second-color;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.header .sticky {
+    background-color: rgba(255, 255, 255, .85);
+    backdrop-filter: blur(5px);
+    align-items: center;
+}
+
+
+@media screen and (max-width: 992px) {
+    .header {
+        margin-top: 5px;
+        border-bottom: 1px solid $light-second-color;
+        margin-bottom: 120px;
+
+        &-menu {
+            display: initial;
+            position: absolute;
+            right: 2px;
+            top: 49px;
+            padding: 18px 27px;
+            background-color: white;
+            border: 1px solid $light-second-color;
+            line-height: 32px;
+            width: 170px;
+            border-radius: 0 0 4px 4px;
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            transition: visibility, opacity .3s;
+
+            &-item {
+                margin-bottom: 4px;
+            }
+        }
+
+        .active {
+            visibility: visible;
+            opacity: 1;
+            height: auto;
+        }
+
+        &-content {
+            gap: 0 40px;
+
+
+            &-button {
+                display: none;
+            }
+        }
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 1050px) {
+    .header {
+        &-menu {
+            &-item {
+                &-link {
+                    &:not(last-of-type) {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1279.98px) {
+    .header {
+        &-menu {
+            &-item {
+                &-link {
+                    &:not(last-of-type) {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        margin-top: 0;
+
+        &-menu {
+            width: 100%;
+            right: 0;
+            line-height: 30px;
+            border: none;
+        }
+    }
+}

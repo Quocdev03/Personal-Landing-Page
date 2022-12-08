@@ -1,0 +1,27 @@
+$primary-color: #7E74F1;
+$primary-light-color: #6e24e8;
+$plant-color: rgb(146, 200, 135);
+$purple-light: #F5F3FE;
+$purple-lighter: #EAE6FE;
+$cinder: #232E35;
+$cinder-light: #656D72;
+$white-color: #ffffff;
+$light-color: #FBFBFB;
+$light-second-color: #F1F1F1;
+$light-third-color: #F5F5F5;
+$light-gray-color: #D9D9D9;
+$font-primary: 'Inter', sans-serif;
+$font-last: 'Plus Jakarta Sans', sans-serif;
+$size-1: 50%;
+$size-2: 1.6rem;
+
+[data-theme="dark"] {
+    $midnight-express: #282D3F;
+    $licorice: #33394D;
+    $light: #2d3346;
+    $light-2: #35394a;
+    $cinder: var($white-color);
+    $cinder-light: #dddddd;
+    $light-4: #51576c;
+    $purple-light-2: rgba(126, 116, 241, .04);
+}
